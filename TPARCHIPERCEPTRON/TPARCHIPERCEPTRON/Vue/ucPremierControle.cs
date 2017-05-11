@@ -103,11 +103,11 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             get
             {
-                return ZoneDessin;
+                return ucDessin;
             }
             set
             {
-                ZoneDessin = value;
+                ucDessin = value;
             }
         }
 
