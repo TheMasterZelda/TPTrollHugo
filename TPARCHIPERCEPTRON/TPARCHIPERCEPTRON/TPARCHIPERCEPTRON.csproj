@@ -75,7 +75,9 @@
     <Compile Include="Vue\ucPremierControle.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vue\ucPremierControle.Designer.cs" />
+    <Compile Include="Vue\ucPremierControle.designer.cs">
+      <DependentUpon>ucPremierControle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vue\ucZoneDessin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,7 +100,9 @@
     <EmbeddedResource Include="Vue\ucDeuxiemeControle.resx">
       <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vue\ucPremierControle.resx" />
+    <EmbeddedResource Include="Vue\ucPremierControle.resx">
+      <DependentUpon>ucPremierControle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
     </EmbeddedResource>
