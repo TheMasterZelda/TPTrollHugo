@@ -41,6 +41,7 @@
             this.ucPremierControle1.Name = "ucPremierControle1";
             this.ucPremierControle1.NomFichierEntrainement = null;
             this.ucPremierControle1.NouveauFichier = false;
+            this.ucPremierControle1.ResultatEntrainement = "";
             this.ucPremierControle1.Size = new System.Drawing.Size(526, 192);
             this.ucPremierControle1.TabIndex = 0;
             this.ucPremierControle1.Titre = "Entrainement";
