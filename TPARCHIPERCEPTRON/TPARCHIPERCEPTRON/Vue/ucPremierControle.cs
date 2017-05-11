@@ -86,6 +86,19 @@ namespace TPARCHIPERCEPTRON.Vue
         }
 
         [Category("Configuration")]
+        public string ResultatEntrainement
+        {
+            get
+            {
+                return txtValeurEntraine.Text;
+            }
+            set
+            {
+                txtValeurEntraine.Text = value;
+            }
+        }
+
+        [Category("Configuration")]
         public double ConstanteApprentissage
         {
             get

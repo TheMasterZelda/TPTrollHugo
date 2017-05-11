@@ -69,14 +69,6 @@ namespace TPARCHIPERCEPTRON.Vue
             }
         }
 
-        public ucZoneDessin ZoneDessin
-        {
-            get
-            {
-                return ((ucPremierControle)this.Component).ZoneDessin;
-            }
-        }
-
         public override DesignerActionItemCollection GetSortedActionItems()
         {
             DesignerActionItemCollection items = new DesignerActionItemCollection();
@@ -85,8 +77,6 @@ namespace TPARCHIPERCEPTRON.Vue
             items.Add(new DesignerActionPropertyItem("EmplacementFichierEntrainement", "Définissez l'emplacement du fichier d'entrainement"));
             items.Add(new DesignerActionPropertyItem("NouveauFichier", "Définissez si on utilise ou non un nouveau fichier"));
             items.Add(new DesignerActionPropertyItem("ConstanteApprentissage", "Définissez la constante d'apprentissage"));
-            items.Add(new DesignerActionPropertyItem("ZoneDessin", "Zone de dessin"));
-
             return items;
         }
     }
