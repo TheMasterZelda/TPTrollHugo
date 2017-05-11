@@ -11,7 +11,8 @@
     <RootNamespace>TPARCHIPERCEPTRON</RootNamespace>
     <AssemblyName>TPARCHIPERCEPTRON</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -37,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +54,14 @@
     <Compile Include="Metier\Perceptron.cs" />
     <Compile Include="CstApplication.cs" />
     <Compile Include="AccesDonnees\GestionFichiersSorties.cs" />
+    <Compile Include="Vue\DesignerDeuxiemeControle.cs" />
+    <Compile Include="Vue\DeuxiemeControleActionList.cs" />
+    <Compile Include="Vue\ucDeuxiemeControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vue\ucDeuxiemeControle.Designer.cs">
+      <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vue\frmAnalyseEcriture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +89,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vue\ucDeuxiemeControle.resx">
+      <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
     </EmbeddedResource>
