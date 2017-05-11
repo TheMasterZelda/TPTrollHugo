@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.grpPremier = new System.Windows.Forms.GroupBox();
-            this.grpDessin = new System.Windows.Forms.GroupBox();
-            this.ucDessin = new TPARCHIPERCEPTRON.ucZoneDessin();
-            this.btnEffacer = new System.Windows.Forms.Button();
-            this.lblValeurEntraine = new System.Windows.Forms.Label();
-            this.btnEntrainement = new System.Windows.Forms.Button();
             this.txtValeurEntraine = new System.Windows.Forms.TextBox();
+            this.btnEntrainement = new System.Windows.Forms.Button();
+            this.lblValeurEntraine = new System.Windows.Forms.Label();
+            this.grpDessin = new System.Windows.Forms.GroupBox();
+            this.btnEffacer = new System.Windows.Forms.Button();
+            this.ucDessin = new TPARCHIPERCEPTRON.ucZoneDessin();
             this.grpPremier.SuspendLayout();
             this.grpDessin.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,32 @@
             this.grpPremier.TabStop = false;
             this.grpPremier.Text = "Entrainement";
             // 
+            // txtValeurEntraine
+            // 
+            this.txtValeurEntraine.Location = new System.Drawing.Point(339, 27);
+            this.txtValeurEntraine.Name = "txtValeurEntraine";
+            this.txtValeurEntraine.Size = new System.Drawing.Size(158, 20);
+            this.txtValeurEntraine.TabIndex = 3;
+            // 
+            // btnEntrainement
+            // 
+            this.btnEntrainement.Location = new System.Drawing.Point(340, 76);
+            this.btnEntrainement.Name = "btnEntrainement";
+            this.btnEntrainement.Size = new System.Drawing.Size(158, 55);
+            this.btnEntrainement.TabIndex = 2;
+            this.btnEntrainement.Text = "Entrainement";
+            this.btnEntrainement.UseVisualStyleBackColor = true;
+            this.btnEntrainement.Click += new System.EventHandler(this.btnEntrainement_Click);
+            // 
+            // lblValeurEntraine
+            // 
+            this.lblValeurEntraine.AutoSize = true;
+            this.lblValeurEntraine.Location = new System.Drawing.Point(237, 30);
+            this.lblValeurEntraine.Name = "lblValeurEntraine";
+            this.lblValeurEntraine.Size = new System.Drawing.Size(96, 13);
+            this.lblValeurEntraine.TabIndex = 1;
+            this.lblValeurEntraine.Text = "Valeur entrainée :  ";
+            // 
             // grpDessin
             // 
             this.grpDessin.Controls.Add(this.btnEffacer);
@@ -63,14 +89,6 @@
             this.grpDessin.TabStop = false;
             this.grpDessin.Text = "Zone de dessin";
             // 
-            // ucDessin
-            // 
-            this.ucDessin.BackColor = System.Drawing.Color.White;
-            this.ucDessin.Location = new System.Drawing.Point(6, 19);
-            this.ucDessin.Name = "ucDessin";
-            this.ucDessin.Size = new System.Drawing.Size(64, 64);
-            this.ucDessin.TabIndex = 0;
-            // 
             // btnEffacer
             // 
             this.btnEffacer.Location = new System.Drawing.Point(89, 19);
@@ -81,30 +99,13 @@
             this.btnEffacer.UseVisualStyleBackColor = true;
             this.btnEffacer.Click += new System.EventHandler(this.btnEffacer_Click);
             // 
-            // lblValeurEntraine
+            // ucDessin
             // 
-            this.lblValeurEntraine.AutoSize = true;
-            this.lblValeurEntraine.Location = new System.Drawing.Point(237, 30);
-            this.lblValeurEntraine.Name = "lblValeurEntraine";
-            this.lblValeurEntraine.Size = new System.Drawing.Size(96, 13);
-            this.lblValeurEntraine.TabIndex = 1;
-            this.lblValeurEntraine.Text = "Valeur entrainée :  ";
-            // 
-            // btnEntrainement
-            // 
-            this.btnEntrainement.Location = new System.Drawing.Point(340, 76);
-            this.btnEntrainement.Name = "btnEntrainement";
-            this.btnEntrainement.Size = new System.Drawing.Size(158, 55);
-            this.btnEntrainement.TabIndex = 2;
-            this.btnEntrainement.Text = "Entrainement";
-            this.btnEntrainement.UseVisualStyleBackColor = true;
-            // 
-            // txtValeurEntraine
-            // 
-            this.txtValeurEntraine.Location = new System.Drawing.Point(339, 27);
-            this.txtValeurEntraine.Name = "txtValeurEntraine";
-            this.txtValeurEntraine.Size = new System.Drawing.Size(158, 20);
-            this.txtValeurEntraine.TabIndex = 3;
+            this.ucDessin.BackColor = System.Drawing.Color.White;
+            this.ucDessin.Location = new System.Drawing.Point(6, 19);
+            this.ucDessin.Name = "ucDessin";
+            this.ucDessin.Size = new System.Drawing.Size(64, 64);
+            this.ucDessin.TabIndex = 0;
             // 
             // ucPremierControle
             // 

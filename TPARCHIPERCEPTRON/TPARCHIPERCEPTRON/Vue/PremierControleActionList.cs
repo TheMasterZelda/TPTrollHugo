@@ -9,10 +9,7 @@ namespace TPARCHIPERCEPTRON.Vue
 {
     public class PremierControleActionList : DesignerActionList
     {
-        private string _NomFichierEntrainement;
-        private string _EmplacementFichierEntrainement;
-        private bool _NouveauFichier;
-        private float _ConstanteApprentissage;
+
         public PremierControleActionList(IComponent component) : base(component)
         {
         }
@@ -21,11 +18,12 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             get
             {
-                return _NomFichierEntrainement;
+                return ((ucPremierControle)this.Component).NomFichierEntrainement;
             }
             set
             {
-                _NomFichierEntrainement = value;
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["NomFichierEntrainement"];
+                property.SetValue(this.Component, value);
             }
         }
 
@@ -33,12 +31,13 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             get
             {
-                return _EmplacementFichierEntrainement;
+                return ((ucPremierControle)this.Component).EmplacementFichierEntrainement;
             }
 
             set
             {
-                _EmplacementFichierEntrainement = value;
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["EmplacementFichierEntrainement"];
+                property.SetValue(this.Component, value);
             }
         }
 
@@ -46,25 +45,27 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             get
             {
-                return _NouveauFichier;
+                return ((ucPremierControle)this.Component).NouveauFichier;
             }
 
             set
             {
-                _NouveauFichier = value;
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["NouveauFichier"];
+                property.SetValue(this.Component, value);
             }
         }
 
-        public float ConstanteApprentissage
+        public double ConstanteApprentissage
         {
             get
             {
-                return _ConstanteApprentissage;
+                return ((ucPremierControle)this.Component).ConstanteApprentissage;
             }
 
             set
             {
-                _ConstanteApprentissage = value;
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["ConstanteApprentissage"];
+                property.SetValue(this.Component, value);
             }
         }
 
