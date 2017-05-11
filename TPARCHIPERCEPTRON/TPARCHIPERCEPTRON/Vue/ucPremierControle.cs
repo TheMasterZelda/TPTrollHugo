@@ -19,6 +19,43 @@ namespace TPARCHIPERCEPTRON.Vue
     [Docking(DockingBehavior.Ask)]
     public partial class ucPremierControle : UserControl
     {
+        public delegate void EffacerButtonClickHandler(object sender, EventArgs e);
+        public delegate void EntrainerButtonClickHandler(object sender, EventArgs e);
+
+        [Category("Configuration"), Browsable(true), Description("Événement associé au bouton effacer")]
+        public event EffacerButtonClickHandler BoutonEffacerClick;
+        [Category("Configuration"), Browsable(true), Description("Événement associé au bouton entrainer")]
+        public event EntrainerButtonClickHandler BoutonEntrainerClick;
+
+
+        [Category("Configuration")]
+        public string Titre
+        {
+            get
+            {
+                return grpPremier.Text;
+            }
+            set
+            {
+                grpPremier.Text = value;
+            }
+        }
+
+
+        [Browsable(false)]
+        public ucZoneDessin ZoneDessin
+        {
+            get
+            {
+                return ZoneDessin;
+            }
+            set
+            {
+                ZoneDessin = value;
+            }
+        }
+
+
         public ucPremierControle()
         {
             InitializeComponent();
