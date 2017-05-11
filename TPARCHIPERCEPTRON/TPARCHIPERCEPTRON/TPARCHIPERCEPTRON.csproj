@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vue\ucPremierControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vue\ucPremierControle.Designer.cs">
+      <DependentUpon>ucPremierControle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vue\ucZoneDessin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,8 +95,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="Vue\ucDeuxiemeControle.resx">
       <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Vue\ucPremierControle.resx">
+      <DependentUpon>ucPremierControle.cs</DependentUpon>
+>>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
