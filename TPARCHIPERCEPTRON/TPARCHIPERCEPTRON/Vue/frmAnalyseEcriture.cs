@@ -55,8 +55,10 @@ namespace TPARCHIPERCEPTRON
         /// <param name="e"></param>
         private void ucDeuxiemeControle1_BoutonOKClick(object sender, EventArgs e)
         {
-            ucDeuxiemeControle1.ResultText = _gcpAnalyseEcriture.TesterPerceptron(ucDeuxiemeControle1.ZoneDessin.Coordonnees);
-            //txtConsole.Text = txtValeurTestee.Text;
+            if (!ucDeuxiemeControle1.ModePhrase)
+                ucDeuxiemeControle1.ZoneDessin.EffacerDessin();
+            ucDeuxiemeControle1.ResultText = _gcpAnalyseEcriture.TesterPerceptron(ucDeuxiemeControle1.ZoneDessin.Coordonnees, ucDeuxiemeControle1.CstApprentissage, ucDeuxiemeControle1.FichierEntrainement);
+            txtConsole.Text = ucDeuxiemeControle1.ResultText;
         }
 
         /// <summary>

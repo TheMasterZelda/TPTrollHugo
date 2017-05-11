@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Metier\GestionClassesPerceptrons.cs" />
     <Compile Include="Metier\CoordDessin.cs" />
-    <Compile Include="Metier\Perceptron.cs" />
     <Compile Include="CstApplication.cs" />
     <Compile Include="AccesDonnees\GestionFichiersSorties.cs" />
+    <Compile Include="Metier\GestionClassesPerceptrons.cs" />
+    <Compile Include="Metier\Perceptron.cs" />
     <Compile Include="Vue\DesignerDeuxiemeControle.cs" />
     <Compile Include="Vue\DesignerPremierControle.cs" />
     <Compile Include="Vue\DeuxiemeControleActionList.cs" />
