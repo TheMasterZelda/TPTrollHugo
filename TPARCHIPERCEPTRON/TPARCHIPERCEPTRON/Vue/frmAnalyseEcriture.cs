@@ -74,5 +74,20 @@ namespace TPARCHIPERCEPTRON
         {
             _gcpAnalyseEcriture.SauvegarderCoordonnees(_fichier);
         }
+
+        private void ucDeuxiemeControle1_BoutonOKClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucPremierControle1_BoutonEffacerClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucPremierControle1_BoutonEntrainerClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

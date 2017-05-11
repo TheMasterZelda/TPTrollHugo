@@ -73,7 +73,7 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             get
             {
-                return ZoneDessin;
+                return ((ucPremierControle)this.Component).ZoneDessin;
             }
         }
 

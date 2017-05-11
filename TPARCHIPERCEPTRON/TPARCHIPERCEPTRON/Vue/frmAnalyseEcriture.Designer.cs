@@ -28,188 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucDessin = new TPARCHIPERCEPTRON.ucZoneDessin();
-            this.btnEffacer = new System.Windows.Forms.Button();
-            this.grpDessinEntrainement = new System.Windows.Forms.GroupBox();
-            this.btnEntrainement = new System.Windows.Forms.Button();
-            this.txtValeurEntrainee = new System.Windows.Forms.TextBox();
-            this.lblValeurEntraine = new System.Windows.Forms.Label();
-            this.grpEntrainement = new System.Windows.Forms.GroupBox();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.txtValeurTestee = new System.Windows.Forms.TextBox();
-            this.lblValeurTestee = new System.Windows.Forms.Label();
-            this.grpTests = new System.Windows.Forms.GroupBox();
-            this.txtConsole = new System.Windows.Forms.TextBox();
+            this.ucPremierControle1 = new TPARCHIPERCEPTRON.Vue.ucPremierControle();
             this.ucDeuxiemeControle1 = new TPARCHIPERCEPTRON.Vue.ucDeuxiemeControle();
-            this.grpDessinEntrainement.SuspendLayout();
-            this.grpEntrainement.SuspendLayout();
-            this.grpTests.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ucDessin
+            // ucPremierControle1
             // 
-            this.ucDessin.BackColor = System.Drawing.Color.White;
-            this.ucDessin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucDessin.Location = new System.Drawing.Point(148, 36);
-            this.ucDessin.Name = "ucDessin";
-            this.ucDessin.Size = new System.Drawing.Size(64, 64);
-            this.ucDessin.TabIndex = 0;
-            // 
-            // btnEffacer
-            // 
-            this.btnEffacer.Location = new System.Drawing.Point(268, 36);
-            this.btnEffacer.Name = "btnEffacer";
-            this.btnEffacer.Size = new System.Drawing.Size(75, 23);
-            this.btnEffacer.TabIndex = 1;
-            this.btnEffacer.Text = "Effacer";
-            this.btnEffacer.UseVisualStyleBackColor = true;
-            this.btnEffacer.Click += new System.EventHandler(this.btnEffacer_Click);
-            // 
-            // grpDessinEntrainement
-            // 
-            this.grpDessinEntrainement.Controls.Add(this.btnEffacer);
-            this.grpDessinEntrainement.Controls.Add(this.ucDessin);
-            this.grpDessinEntrainement.Location = new System.Drawing.Point(12, 12);
-            this.grpDessinEntrainement.Name = "grpDessinEntrainement";
-            this.grpDessinEntrainement.Size = new System.Drawing.Size(366, 138);
-            this.grpDessinEntrainement.TabIndex = 4;
-            this.grpDessinEntrainement.TabStop = false;
-            this.grpDessinEntrainement.Text = "Zone de dessin";
-            // 
-            // btnEntrainement
-            // 
-            this.btnEntrainement.Location = new System.Drawing.Point(253, 20);
-            this.btnEntrainement.Name = "btnEntrainement";
-            this.btnEntrainement.Size = new System.Drawing.Size(106, 47);
-            this.btnEntrainement.TabIndex = 1;
-            this.btnEntrainement.Text = "Entrainement";
-            this.btnEntrainement.UseVisualStyleBackColor = true;
-            this.btnEntrainement.Click += new System.EventHandler(this.btnEntrainement_Click);
-            // 
-            // txtValeurEntrainee
-            // 
-            this.txtValeurEntrainee.Location = new System.Drawing.Point(103, 37);
-            this.txtValeurEntrainee.Name = "txtValeurEntrainee";
-            this.txtValeurEntrainee.Size = new System.Drawing.Size(100, 20);
-            this.txtValeurEntrainee.TabIndex = 2;
-            // 
-            // lblValeurEntraine
-            // 
-            this.lblValeurEntraine.AutoSize = true;
-            this.lblValeurEntraine.Location = new System.Drawing.Point(7, 40);
-            this.lblValeurEntraine.Name = "lblValeurEntraine";
-            this.lblValeurEntraine.Size = new System.Drawing.Size(90, 13);
-            this.lblValeurEntraine.TabIndex = 3;
-            this.lblValeurEntraine.Text = "Valeur entrainée :";
-            // 
-            // grpEntrainement
-            // 
-            this.grpEntrainement.Controls.Add(this.lblValeurEntraine);
-            this.grpEntrainement.Controls.Add(this.txtValeurEntrainee);
-            this.grpEntrainement.Controls.Add(this.btnEntrainement);
-            this.grpEntrainement.Location = new System.Drawing.Point(13, 156);
-            this.grpEntrainement.Name = "grpEntrainement";
-            this.grpEntrainement.Size = new System.Drawing.Size(365, 79);
-            this.grpEntrainement.TabIndex = 5;
-            this.grpEntrainement.TabStop = false;
-            this.grpEntrainement.Text = "Entrainement";
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(253, 20);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(106, 47);
-            this.btnTest.TabIndex = 1;
-            this.btnTest.Text = "Test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
-            // txtValeurTestee
-            // 
-            this.txtValeurTestee.Location = new System.Drawing.Point(103, 37);
-            this.txtValeurTestee.Name = "txtValeurTestee";
-            this.txtValeurTestee.ReadOnly = true;
-            this.txtValeurTestee.Size = new System.Drawing.Size(100, 20);
-            this.txtValeurTestee.TabIndex = 2;
-            // 
-            // lblValeurTestee
-            // 
-            this.lblValeurTestee.AutoSize = true;
-            this.lblValeurTestee.Location = new System.Drawing.Point(7, 40);
-            this.lblValeurTestee.Name = "lblValeurTestee";
-            this.lblValeurTestee.Size = new System.Drawing.Size(75, 13);
-            this.lblValeurTestee.TabIndex = 3;
-            this.lblValeurTestee.Text = "Valeur testée :";
-            // 
-            // grpTests
-            // 
-            this.grpTests.Controls.Add(this.lblValeurTestee);
-            this.grpTests.Controls.Add(this.txtValeurTestee);
-            this.grpTests.Controls.Add(this.btnTest);
-            this.grpTests.Location = new System.Drawing.Point(13, 241);
-            this.grpTests.Name = "grpTests";
-            this.grpTests.Size = new System.Drawing.Size(365, 79);
-            this.grpTests.TabIndex = 6;
-            this.grpTests.TabStop = false;
-            this.grpTests.Text = "Tests";
-            // 
-            // txtConsole
-            // 
-            this.txtConsole.Location = new System.Drawing.Point(12, 326);
-            this.txtConsole.Multiline = true;
-            this.txtConsole.Name = "txtConsole";
-            this.txtConsole.Size = new System.Drawing.Size(366, 185);
-            this.txtConsole.TabIndex = 2;
+            this.ucPremierControle1.ConstanteApprentissage = 0D;
+            this.ucPremierControle1.EmplacementFichierEntrainement = null;
+            this.ucPremierControle1.Location = new System.Drawing.Point(12, 12);
+            this.ucPremierControle1.Name = "ucPremierControle1";
+            this.ucPremierControle1.NomFichierEntrainement = null;
+            this.ucPremierControle1.NouveauFichier = false;
+            this.ucPremierControle1.Size = new System.Drawing.Size(526, 192);
+            this.ucPremierControle1.TabIndex = 0;
+            this.ucPremierControle1.Titre = "Entrainement";
+            this.ucPremierControle1.BoutonEffacerClick += new TPARCHIPERCEPTRON.Vue.ucPremierControle.EffacerButtonClickHandler(this.ucPremierControle1_BoutonEffacerClick);
+            this.ucPremierControle1.BoutonEntrainerClick += new TPARCHIPERCEPTRON.Vue.ucPremierControle.EntrainerButtonClickHandler(this.ucPremierControle1_BoutonEntrainerClick);
             // 
             // ucDeuxiemeControle1
             // 
-            this.ucDeuxiemeControle1.Location = new System.Drawing.Point(510, 176);
+            this.ucDeuxiemeControle1.CstApprentissage = 0D;
+            this.ucDeuxiemeControle1.FichierEntrainement = null;
+            this.ucDeuxiemeControle1.Location = new System.Drawing.Point(94, 210);
+            this.ucDeuxiemeControle1.ModePhrase = false;
             this.ucDeuxiemeControle1.Name = "ucDeuxiemeControle1";
             this.ucDeuxiemeControle1.ResultText = "";
             this.ucDeuxiemeControle1.Size = new System.Drawing.Size(357, 331);
-            this.ucDeuxiemeControle1.TabIndex = 7;
+            this.ucDeuxiemeControle1.TabIndex = 1;
             this.ucDeuxiemeControle1.TextGrpDessin = "Zone de dessin";
+            this.ucDeuxiemeControle1.BoutonOKClick += new TPARCHIPERCEPTRON.Vue.ucDeuxiemeControle.OKButtonClickHandler(this.ucDeuxiemeControle1_BoutonOKClick);
             // 
             // frmAnalyseEcriture
             // 
-            this.AcceptButton = this.btnEntrainement;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 519);
+            this.ClientSize = new System.Drawing.Size(537, 593);
             this.Controls.Add(this.ucDeuxiemeControle1);
-            this.Controls.Add(this.grpTests);
-            this.Controls.Add(this.grpEntrainement);
-            this.Controls.Add(this.grpDessinEntrainement);
-            this.Controls.Add(this.txtConsole);
+            this.Controls.Add(this.ucPremierControle1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmAnalyseEcriture";
             this.Text = "Analyse Écriture";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAnalyseEcriture_FormClosing);
-            this.grpDessinEntrainement.ResumeLayout(false);
-            this.grpEntrainement.ResumeLayout(false);
-            this.grpEntrainement.PerformLayout();
-            this.grpTests.ResumeLayout(false);
-            this.grpTests.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ucZoneDessin ucDessin;
-        private System.Windows.Forms.Button btnEffacer;
-        private System.Windows.Forms.GroupBox grpDessinEntrainement;
-        private System.Windows.Forms.Button btnEntrainement;
-        private System.Windows.Forms.TextBox txtValeurEntrainee;
-        private System.Windows.Forms.Label lblValeurEntraine;
-        private System.Windows.Forms.GroupBox grpEntrainement;
-        private System.Windows.Forms.Button btnTest;
-        private System.Windows.Forms.TextBox txtValeurTestee;
-        private System.Windows.Forms.Label lblValeurTestee;
-        private System.Windows.Forms.GroupBox grpTests;
-        private System.Windows.Forms.TextBox txtConsole;
+        private Vue.ucPremierControle ucPremierControle1;
         private Vue.ucDeuxiemeControle ucDeuxiemeControle1;
     }
 }
