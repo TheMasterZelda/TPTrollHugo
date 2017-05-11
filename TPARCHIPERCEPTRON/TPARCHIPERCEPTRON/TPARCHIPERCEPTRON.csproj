@@ -55,9 +55,7 @@
     <Compile Include="CstApplication.cs" />
     <Compile Include="AccesDonnees\GestionFichiersSorties.cs" />
     <Compile Include="Vue\DesignerDeuxiemeControle.cs" />
-    <Compile Include="Vue\DesignerPremierControle.cs" />
     <Compile Include="Vue\DeuxiemeControleActionList.cs" />
-    <Compile Include="Vue\PremierControleActionList.cs" />
     <Compile Include="Vue\ucDeuxiemeControle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,12 +70,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vue\ucPremierControle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Vue\ucPremierControle.Designer.cs">
-      <DependentUpon>ucPremierControle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vue\ucZoneDessin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,9 +91,6 @@
     </Compile>
     <EmbeddedResource Include="Vue\ucDeuxiemeControle.resx">
       <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vue\ucPremierControle.resx">
-      <DependentUpon>ucPremierControle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
