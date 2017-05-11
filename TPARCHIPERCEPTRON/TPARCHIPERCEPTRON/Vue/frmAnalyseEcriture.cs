@@ -22,47 +22,11 @@ namespace TPARCHIPERCEPTRON
             InitializeComponent();
             _fichier = ConfigurationManager.AppSettings["FichierApp"];
             _gcpAnalyseEcriture = new Metier.GestionClassesPerceptrons();
-            ucDessin.Width = CstApplication.TAILLEDESSINX;
-            ucDessin.Height = CstApplication.TAILLEDESSINY;
+            ucDeuxiemeControle1.ZoneDessin.Width = CstApplication.TAILLEDESSINX;
+            ucDeuxiemeControle1.ZoneDessin.Height = CstApplication.TAILLEDESSINY;
+            ucPremierControle1.ZoneDessin.Width = CstApplication.TAILLEDESSINX;
+            ucPremierControle1.ZoneDessin.Height = CstApplication.TAILLEDESSINY;
             _gcpAnalyseEcriture.ChargerCoordonnees(_fichier);
-        }
-
-
-        /// <summary>
-        /// Entraine le bon Perceptron avec la valeur entrée dans le textBox txtValeurEntrainee et le caractère dessiné.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnEntrainement_Click(object sender, EventArgs e)
-        {
-            if (txtValeurEntrainee.Text == "")
-                MessageBox.Show("Vous devez entrer au moins une valeur à faire apprendre.");
-            else
-            {
-                txtConsole.Text = _gcpAnalyseEcriture.Entrainement(ucDessin.Coordonnees, txtValeurEntrainee.Text);
-                //ucDessin.EffacerDessin();
-            }
-        }
-
-        /// <summary>
-        /// Appel le perceptron pour vérifier quel neuronne identifie le mieux le caractère dessiné.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            txtValeurTestee.Text = _gcpAnalyseEcriture.TesterPerceptron(ucDessin.Coordonnees);
-            txtConsole.Text = txtValeurTestee.Text;
-        }
-
-        /// <summary>
-        /// Efface le caractère dessiné et sa matrice.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnEffacer_Click(object sender, EventArgs e)
-        {
-            ucDessin.EffacerDessin();
         }
 
         /// <summary>
@@ -75,19 +39,41 @@ namespace TPARCHIPERCEPTRON
             _gcpAnalyseEcriture.SauvegarderCoordonnees(_fichier);
         }
 
+        /// <summary>
+        /// Appel le perceptron pour vérifier quel neuronne identifie le mieux le caractère dessiné.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ucDeuxiemeControle1_BoutonOKClick(object sender, EventArgs e)
         {
-
+            ucDeuxiemeControle1.ResultText = _gcpAnalyseEcriture.TesterPerceptron(ucDeuxiemeControle1.ZoneDessin.Coordonnees);
+            //txtConsole.Text = txtValeurTestee.Text;
         }
 
+        /// <summary>
+        /// Efface le caractère dessiné et sa matrice.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ucPremierControle1_BoutonEffacerClick(object sender, EventArgs e)
         {
-
+            ucPremierControle1.ZoneDessin.EffacerDessin();
         }
 
+        /// <summary>
+        /// Entraine le bon Perceptron avec la valeur entrée dans le textBox txtValeurEntrainee et le caractère dessiné.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ucPremierControle1_BoutonEntrainerClick(object sender, EventArgs e)
         {
-
+           // if (txtValeurEntrainee.Text == "")
+           //     MessageBox.Show("Vous devez entrer au moins une valeur à faire apprendre.");
+           // else
+           // {
+           //     txtConsole.Text = _gcpAnalyseEcriture.Entrainement(ucDessin.Coordonnees, txtValeurEntrainee.Text);
+           //     //ucDessin.EffacerDessin();
+           // }
         }
     }
 }
