@@ -95,13 +95,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<<<<<<< HEAD
     <EmbeddedResource Include="Vue\ucDeuxiemeControle.resx">
       <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucPremierControle.resx">
       <DependentUpon>ucPremierControle.cs</DependentUpon>
->>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucZoneDessin.resx">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
