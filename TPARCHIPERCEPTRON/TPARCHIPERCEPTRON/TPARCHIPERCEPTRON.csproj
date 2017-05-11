@@ -84,6 +84,9 @@
     <Compile Include="Vue\ucZoneDessin.Designer.cs">
       <DependentUpon>ucZoneDessin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vue\frmAnalyseEcriture.en.resx">
+      <DependentUpon>frmAnalyseEcriture.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vue\frmAnalyseEcriture.resx">
       <DependentUpon>frmAnalyseEcriture.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,8 +100,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vue\ucDeuxiemeControle.en.resx">
+      <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucDeuxiemeControle.resx">
       <DependentUpon>ucDeuxiemeControle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vue\ucPremierControle.en.resx">
+      <DependentUpon>ucPremierControle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vue\ucPremierControle.resx">
       <DependentUpon>ucPremierControle.cs</DependentUpon>

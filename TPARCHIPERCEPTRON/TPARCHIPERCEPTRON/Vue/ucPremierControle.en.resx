@@ -117,129 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;txtConsole.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnEntrainement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="txtConsole.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btnEntrainement.Text" xml:space="preserve">
+    <value>Train</value>
+  </data>
+  <data name="lblValeurEntraine.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="lblValeurEntraine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
   </data>
-  <data name="&gt;&gt;tsmiLangue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblValeurEntraine.Text" xml:space="preserve">
+    <value>Trained value :</value>
   </data>
-  <data name="tsmiLangue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+  <data name="btnEffacer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;menuPrincipal.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnEffacer.Text" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="grpDessin.Text" xml:space="preserve">
+    <value>Draw zone</value>
   </data>
-  <data name="tsmiLangue.Text" xml:space="preserve">
-    <value>Langue</value>
+  <data name="grpPremier.Text" xml:space="preserve">
+    <value>Training</value>
   </data>
-  <data name="&gt;&gt;txtConsole.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmAnalyseEcriture</value>
-  </data>
-  <data name="&gt;&gt;ucDeuxiemeControle1.Type" xml:space="preserve">
-    <value>TPARCHIPERCEPTRON.Vue.ucDeuxiemeControle, TPARCHIPERCEPTRON, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="ucDeuxiemeControle1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 251</value>
-  </data>
-  <data name="&gt;&gt;tsmiLangue.Name" xml:space="preserve">
-    <value>tsmiLangue</value>
-  </data>
-  <data name="&gt;&gt;ucPremierControle1.Type" xml:space="preserve">
-    <value>TPARCHIPERCEPTRON.Vue.ucPremierControle, TPARCHIPERCEPTRON, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="txtConsole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>472, 181</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipal.Name" xml:space="preserve">
-    <value>menuPrincipal</value>
-  </data>
-  <data name="txtConsole.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>537, 794</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipal.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ucPremierControle1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ucDeuxiemeControle1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ucPremierControle1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>526, 192</value>
-  </data>
-  <data name="&gt;&gt;menuPrincipal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuPrincipal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ucPremierControle1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 53</value>
-  </data>
-  <data name="menuPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ucDeuxiemeControle1.Name" xml:space="preserve">
-    <value>ucDeuxiemeControle1</value>
-  </data>
-  <data name="&gt;&gt;txtConsole.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;txtConsole.Name" xml:space="preserve">
-    <value>txtConsole</value>
-  </data>
-  <data name="ucPremierControle1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="ucDeuxiemeControle1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ucPremierControle1.Name" xml:space="preserve">
-    <value>ucPremierControle1</value>
-  </data>
-  <data name="txtConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 588</value>
-  </data>
-  <data name="ucDeuxiemeControle1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 331</value>
-  </data>
-  <data name="&gt;&gt;ucDeuxiemeControle1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="menuPrincipal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>537, 24</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Analyse Écriture</value>
-  </data>
-  <data name="&gt;&gt;ucPremierControle1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="menuPrincipal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
