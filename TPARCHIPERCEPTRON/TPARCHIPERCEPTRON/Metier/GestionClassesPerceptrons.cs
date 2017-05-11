@@ -37,7 +37,7 @@ namespace TPARCHIPERCEPTRON.Metier
                     _lstPerceptrons.Add(c.Reponse, new Perceptron(c.Reponse));
 
             foreach (Perceptron p in _lstPerceptrons.Values)
-                p.Entrainement(_lstCoordonnes, null);
+                p.Entrainement(_lstCoordonnes);
         }
 
         /// <summary>
@@ -66,8 +66,8 @@ namespace TPARCHIPERCEPTRON.Metier
             coordo.Reponse = reponse;
             _lstCoordonnes.Add(coordo);
             
-            //foreach (Perceptron p in _lstPerceptrons.Values)
-                //sConsole+= p.Entrainement(_lstCoordonnes);
+            foreach (Perceptron p in _lstPerceptrons.Values)
+                sConsole+= p.Entrainement(_lstCoordonnes);
 
             return sConsole;
         }
@@ -78,18 +78,8 @@ namespace TPARCHIPERCEPTRON.Metier
         /// </summary>
         /// <param name="coord">Les nouvelles coordonnées</param>
         /// <returns>Retourne la liste des valeurs possibles du perceptron</returns>
-        public string TesterPerceptron(CoordDessin coord, double cstApprentissage, string fichier)
+        public string TesterPerceptron(CoordDessin coord)
         {
-            // Entrainement et load
-            _lstCoordonnes = _gestionFichiers.ChargerCoordonnees(fichier);
-            foreach (CoordDessin c in _lstCoordonnes)
-                if (_lstPerceptrons.ContainsKey(c.Reponse) == false)
-                    _lstPerceptrons.Add(c.Reponse, new Perceptron(c.Reponse));
-
-            foreach (Perceptron p in _lstPerceptrons.Values)
-                p.Entrainement(_lstCoordonnes, cstApprentissage);
-
-            // Test
             string resultat = "";
             bool valeur;
             
@@ -97,10 +87,7 @@ namespace TPARCHIPERCEPTRON.Metier
             {
                 valeur = p.TesterNeurone(coord);
                 if (valeur)
-                {
                     resultat += p.Reponse;
-                    break;
-                }
             }
 
             if (resultat == "")

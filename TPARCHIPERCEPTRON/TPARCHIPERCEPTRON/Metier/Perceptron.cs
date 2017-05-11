@@ -33,15 +33,10 @@ namespace TPARCHIPERCEPTRON.Metier
         /// </summary>
         /// <param name="lstCoord">La liste de coordonnées pour les caractères à analysés.</param>
         /// <returns>Les paramètres de la console</returns>
-        public string Entrainement(List<CoordDessin> lstCoord, double? cstApprentissage)
+        public string Entrainement(List<CoordDessin> lstCoord)
         {
             if (lstCoord.Count < 1)
                 return "Les coordonnées sont vides";
-
-            if (cstApprentissage == null)
-                _cstApprentissage = CstApplication.CONSTANTEAPPRENTISSAGE;
-            else
-                _cstApprentissage = (double)cstApprentissage;
 
             Random r = new Random();
 
