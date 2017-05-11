@@ -30,6 +30,7 @@
         {
             this.ucPremierControle1 = new TPARCHIPERCEPTRON.Vue.ucPremierControle();
             this.ucDeuxiemeControle1 = new TPARCHIPERCEPTRON.Vue.ucDeuxiemeControle();
+            this.txtConsole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ucPremierControle1
@@ -59,11 +60,20 @@
             this.ucDeuxiemeControle1.TextGrpDessin = "Zone de dessin";
             this.ucDeuxiemeControle1.BoutonOKClick += new TPARCHIPERCEPTRON.Vue.ucDeuxiemeControle.OKButtonClickHandler(this.ucDeuxiemeControle1_BoutonOKClick);
             // 
+            // txtConsole
+            // 
+            this.txtConsole.Location = new System.Drawing.Point(40, 547);
+            this.txtConsole.Multiline = true;
+            this.txtConsole.Name = "txtConsole";
+            this.txtConsole.Size = new System.Drawing.Size(472, 181);
+            this.txtConsole.TabIndex = 2;
+            // 
             // frmAnalyseEcriture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 593);
+            this.ClientSize = new System.Drawing.Size(537, 740);
+            this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.ucDeuxiemeControle1);
             this.Controls.Add(this.ucPremierControle1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -72,6 +82,7 @@
             this.Text = "Analyse Écriture";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAnalyseEcriture_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,6 +90,7 @@
 
         private Vue.ucPremierControle ucPremierControle1;
         private Vue.ucDeuxiemeControle ucDeuxiemeControle1;
+        private System.Windows.Forms.TextBox txtConsole;
     }
 }
 
