@@ -14,38 +14,43 @@ namespace TPARCHIPERCEPTRON.Vue
         }
 
         // Liste des propriétés à ajouter au SmartTag
-        public string TextGrpDessin
+        public string FichierEntrainement
         {
-            get { return ((ucDeuxiemeControle)this.Component).TextGrpDessin; }
+            get { return ((ucDeuxiemeControle)this.Component).FichierEntrainement; }
             set
             {
-                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["TextGrpDessin"];
-                property.SetValue(this.Component, value);
-            }
-        }
-        public string ResultText
-        {
-            get { return ((ucDeuxiemeControle)this.Component).ResultText; }
-            set
-            {
-                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["ResultText"];
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["FichierEntrainement"];
                 property.SetValue(this.Component, value);
             }
         }
 
-        [Browsable(false)]
-        public ucZoneDessin ZoneDessin
+        public bool ModePhrase
         {
-            get { return ((ucDeuxiemeControle)this.Component).ZoneDessin; }
+            get { return ((ucDeuxiemeControle)this.Component).ModePhrase; }
+            set
+            {
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["ModePhrase"];
+                property.SetValue(this.Component, value);
+            }
+        }
+
+        public double CstApprentissage
+        {
+            get { return ((ucDeuxiemeControle)this.Component).CstApprentissage; }
+            set
+            {
+                PropertyDescriptor property = TypeDescriptor.GetProperties(this.Component)["CstApprentissage"];
+                property.SetValue(this.Component, value);
+            }
         }
 
         public override DesignerActionItemCollection GetSortedActionItems()
         {
             DesignerActionItemCollection items = new DesignerActionItemCollection();
             items.Add(new DesignerActionHeaderItem("Paramétrage"));
-            items.Add(new DesignerActionPropertyItem("TextGrpDessin", "Définissez le titre du groupe de contrôles: "));
-            items.Add(new DesignerActionPropertyItem("ResultText", "Définissez le nom d'utilisateur par défaut: "));
-            items.Add(new DesignerActionPropertyItem("ZoneDessin", "Définissez mot de passe par défaut: "));
+            items.Add(new DesignerActionPropertyItem("FichierEntrainement", "Définissez le titre du groupe de contrôles: "));
+            items.Add(new DesignerActionPropertyItem("ModePhrase", "Définissez le nom d'utilisateur par défaut: "));
+            items.Add(new DesignerActionPropertyItem("CstApprentissage", "Définissez mot de passe par défaut: "));
 
             return items;
         }

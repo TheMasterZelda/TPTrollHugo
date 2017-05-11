@@ -22,6 +22,9 @@ namespace TPARCHIPERCEPTRON.Vue
         public delegate void OKButtonClickHandler(object sender, EventArgs e);
         [Category("Configuration"), Description("Événement associé")]
         public event OKButtonClickHandler BoutonOKClick;
+        private string _fichierEntrainement;
+        private bool _modePhrase;
+        private double _cstApprentissage;
 
         [Category("Configuration"), Description("Titre de la zone de dessin")]
         public string TextGrpDessin
@@ -35,6 +38,27 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             get { return txtResult.Text; }
             set { txtResult.Text = value; }
+        }
+
+        [Category("Configuration"), Description("Fichier entrainement")]
+        public string FichierEntrainement
+        {
+            get { return _fichierEntrainement; }
+            set { _fichierEntrainement = value; }
+        }
+
+        [Category("Configuration"), Description("Mode Phrase")]
+        public bool ModePhrase
+        {
+            get { return _modePhrase; }
+            set { _modePhrase = value; }
+        }
+
+        [Category("Configuration"), Description("Constante d'apprentissage")]
+        public double CstApprentissage
+        {
+            get { return _cstApprentissage; }
+            set { _cstApprentissage = value; }
         }
 
         [Browsable(false)]
