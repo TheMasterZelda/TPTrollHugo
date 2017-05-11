@@ -58,16 +58,16 @@ namespace TPARCHIPERCEPTRON.Metier
         /// <param name="coordo">Les nouvelles coordonnées</param>
         /// <param name="reponse">La réponse associé(caractère) aux coordonnées</param>
         /// <returns>Le résultat de la console</returns>
-        public string Entrainement(CoordDessin coordo, string reponse)
+        public string Entrainement(CoordDessin coordo, string reponse, double cstApprentissage)
         {
             string sConsole = "";
             if (_lstPerceptrons.ContainsKey(reponse) == false)
                 _lstPerceptrons.Add(reponse, new Perceptron(reponse));
             coordo.Reponse = reponse;
             _lstCoordonnes.Add(coordo);
-            
-            //foreach (Perceptron p in _lstPerceptrons.Values)
-                //sConsole+= p.Entrainement(_lstCoordonnes);
+
+            foreach (Perceptron p in _lstPerceptrons.Values)
+                sConsole += p.Entrainement(_lstCoordonnes, cstApprentissage);
 
             return sConsole;
         }
@@ -78,7 +78,7 @@ namespace TPARCHIPERCEPTRON.Metier
         /// </summary>
         /// <param name="coord">Les nouvelles coordonnées</param>
         /// <returns>Retourne la liste des valeurs possibles du perceptron</returns>
-        public string TesterPerceptron(CoordDessin coord, double cstApprentissage, string fichier)
+        public string TesterPerceptron(CoordDessin coord, double cstApprentissage, string fichier, bool phrase)
         {
             // Entrainement et load
             _lstCoordonnes = _gestionFichiers.ChargerCoordonnees(fichier);
@@ -92,14 +92,15 @@ namespace TPARCHIPERCEPTRON.Metier
             // Test
             string resultat = "";
             bool valeur;
-            
+
             foreach (Perceptron p in _lstPerceptrons.Values)
             {
                 valeur = p.TesterNeurone(coord);
                 if (valeur)
                 {
                     resultat += p.Reponse;
-                    break;
+                    if (phrase)
+                        break;
                 }
             }
 

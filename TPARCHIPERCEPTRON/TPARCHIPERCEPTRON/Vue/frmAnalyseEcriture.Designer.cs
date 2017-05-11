@@ -58,9 +58,9 @@
             // ucDeuxiemeControle1
             // 
             resources.ApplyResources(this.ucDeuxiemeControle1, "ucDeuxiemeControle1");
-            this.ucDeuxiemeControle1.CstApprentissage = 0D;
-            this.ucDeuxiemeControle1.FichierEntrainement = null;
-            this.ucDeuxiemeControle1.ModePhrase = false;
+            this.ucDeuxiemeControle1.CstApprentissage = 0.01D;
+            this.ucDeuxiemeControle1.FichierEntrainement = "Train.dat";
+            this.ucDeuxiemeControle1.ModePhrase = true;
             this.ucDeuxiemeControle1.Name = "ucDeuxiemeControle1";
             this.ucDeuxiemeControle1.ResultText = "";
             this.ucDeuxiemeControle1.TextGrpDessin = "Zone de dessin";

@@ -48,9 +48,9 @@ namespace TPARCHIPERCEPTRON.Vue
         {
             DesignerActionItemCollection items = new DesignerActionItemCollection();
             items.Add(new DesignerActionHeaderItem("Paramétrage"));
-            items.Add(new DesignerActionPropertyItem("FichierEntrainement", "Définissez le titre du groupe de contrôles: "));
-            items.Add(new DesignerActionPropertyItem("ModePhrase", "Définissez le nom d'utilisateur par défaut: "));
-            items.Add(new DesignerActionPropertyItem("CstApprentissage", "Définissez mot de passe par défaut: "));
+            items.Add(new DesignerActionPropertyItem("FichierEntrainement", "Définissez le nom et l'emplacement du fichier d'entrainement"));
+            items.Add(new DesignerActionPropertyItem("ModePhrase", "Définissez si on utilise écrit des phrases ou non"));
+            items.Add(new DesignerActionPropertyItem("CstApprentissage", "Définissez la constante d'apprentissage"));
 
             return items;
         }

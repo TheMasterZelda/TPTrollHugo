@@ -35,7 +35,10 @@ namespace TPARCHIPERCEPTRON
             ucDeuxiemeControle1.ZoneDessin.Height = CstApplication.TAILLEDESSINY;
             ucPremierControle1.ZoneDessin.Width = CstApplication.TAILLEDESSINX;
             ucPremierControle1.ZoneDessin.Height = CstApplication.TAILLEDESSINY;
-            _gcpAnalyseEcriture.ChargerCoordonnees(_fichier);
+            if (!ucPremierControle1.NouveauFichier)
+            {
+                _gcpAnalyseEcriture.ChargerCoordonnees(_fichier);
+            }
         }
 
         /// <summary>
@@ -45,7 +48,7 @@ namespace TPARCHIPERCEPTRON
         /// <param name="e"></param>
         private void frmAnalyseEcriture_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _gcpAnalyseEcriture.SauvegarderCoordonnees(_fichier);
+            _gcpAnalyseEcriture.SauvegarderCoordonnees(ucPremierControle1.EmplacementFichierEntrainement + ucPremierControle1.NomFichierEntrainement);
         }
 
         /// <summary>
@@ -56,9 +59,15 @@ namespace TPARCHIPERCEPTRON
         private void ucDeuxiemeControle1_BoutonOKClick(object sender, EventArgs e)
         {
             if (!ucDeuxiemeControle1.ModePhrase)
-                ucDeuxiemeControle1.ZoneDessin.EffacerDessin();
-            ucDeuxiemeControle1.ResultText = _gcpAnalyseEcriture.TesterPerceptron(ucDeuxiemeControle1.ZoneDessin.Coordonnees, ucDeuxiemeControle1.CstApprentissage, ucDeuxiemeControle1.FichierEntrainement);
+                ucDeuxiemeControle1.ResultText = "";
+            ucDeuxiemeControle1.ZoneDessin.EffacerDessin();
+            string sResult = _gcpAnalyseEcriture.TesterPerceptron(ucDeuxiemeControle1.ZoneDessin.Coordonnees, ucDeuxiemeControle1.CstApprentissage, ucDeuxiemeControle1.FichierEntrainement, ucDeuxiemeControle1.ModePhrase);
+            ucDeuxiemeControle1.ResultText += sResult;
             txtConsole.Text = ucDeuxiemeControle1.ResultText;
+            if (ucDeuxiemeControle1.ModePhrase && sResult == "*")
+            {
+                ucDeuxiemeControle1.ResultText = "";
+            }
         }
 
         /// <summary>
@@ -78,13 +87,13 @@ namespace TPARCHIPERCEPTRON
         /// <param name="e"></param>
         private void ucPremierControle1_BoutonEntrainerClick(object sender, EventArgs e)
         {
-           // if (txtValeurEntrainee.Text == "")
-           //     MessageBox.Show("Vous devez entrer au moins une valeur à faire apprendre.");
-           // else
-           // {
-           //     txtConsole.Text = _gcpAnalyseEcriture.Entrainement(ucDessin.Coordonnees, txtValeurEntrainee.Text);
-           //     //ucDessin.EffacerDessin();
-           // }
+            if (ucPremierControle1.ResultatEntrainement == "")
+                MessageBox.Show("Vous devez entrer au moins une valeur à faire apprendre.");
+            else
+            {
+                txtConsole.Text = _gcpAnalyseEcriture.Entrainement(ucPremierControle1.ZoneDessin.Coordonnees, ucPremierControle1.ResultatEntrainement, ucPremierControle1.ConstanteApprentissage);
+                ucPremierControle1.ZoneDessin.EffacerDessin();
+            }
         }
 
         private void langueToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
